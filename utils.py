@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import cross_validate
 
 def mean_std_cross_val_scores(model, X_train, y_train, **kwargs):
@@ -30,3 +31,16 @@ def mean_std_cross_val_scores(model, X_train, y_train, **kwargs):
 
     return pd.Series(data=out_col, index=mean_scores.index)
 
+
+def load_data(filepath):
+    """Load a CSV file into a pandas DataFrame."""
+    return pd.read_csv(filepath)
+
+def load_all_data(directory_path):
+    """Load all CSV files from a directory and merge them."""
+    dataframes = []
+    for filename in os.listdir(directory_path):
+        if filename.endswith(".csv"):
+            filepath = os.path.join(directory_path, filename)
+            dataframes.append(load_data(filepath))
+    return pd.concat(dataframes, ignore_index=True)
