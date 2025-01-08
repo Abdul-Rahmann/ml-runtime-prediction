@@ -1,0 +1,13 @@
+static_site/
+__pycache__/
+*.pkl
+.DS_Store
+
+Enhanced_Generalized_Training_Time_Dataset.csv 
+Extended_Training_Time_Dataset.csv             
+Realistic_Training_Time_Dataset.csv
+Enhanced_Training_Time_Dataset.csv             
+Model_Training_Times_Simulation_Dataset.csv    
+Realistic_Very_Long_Training_Time_Dataset.csv
+Realistic_Long_Training_Time_Dataset.csv       
+Replacement_Training_Time_Dataset.csv
