@@ -6,7 +6,7 @@ import pickle
 with open('models/xgboost_best_model.pkl','rb') as file:
     model = pickle.load(file)
 
-st.title("XGBoost Prediction App")
+st.title("ML Model Runtime Prediction App")
 st.write("Provide input data to get predictions")
 
 st.sidebar.header("Input Parameters")
